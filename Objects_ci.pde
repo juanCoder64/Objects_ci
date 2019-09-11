@@ -1,7 +1,7 @@
 Camion c;
 Estrella strella= new Estrella();  
 void setup(){
-  size(700, 500);
+  size(640, 360);
   c = new Camion(width/2, height/2, 100 , 50, color(255, 255, 0), 10);
 }
 void mouseClicked(){

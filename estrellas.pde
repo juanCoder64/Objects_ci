@@ -22,7 +22,7 @@ class Estrella{
       sx = 0 + cos(a+halfAngle) * radius1;
       sy = 0 + sin(a+halfAngle) * radius1;
       vertex(sx, sy);
-       
+       fill(color(255,192,5));
     }
     endShape(CLOSE);
    
@@ -34,6 +34,6 @@ class Estrella{
     rotate(frameCount / 400.0);
     f(); 
     popMatrix();
-    fill(color(255,192,5));
+    
   }
 };
