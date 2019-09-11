@@ -1,12 +1,17 @@
 Camion c;
+Estrella strella= new Estrella();  
 void setup(){
   size(700, 500);
   c = new Camion(width/2, height/2, 100 , 50, color(255, 255, 0), 10);
 }
-
+void mouseClicked(){
+  strella = new Estrella();
+  }
 void draw(){
+ 
     background(255);
     c.dibujar();
+      strella.dibujar();
     delay(1);
 }
 void keyPressed(){

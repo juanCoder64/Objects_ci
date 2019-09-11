@@ -1,7 +1,7 @@
 class Estrella{
   private float x, y, radius1, radius2;
   private int nPoints;
-  private color inside = color(255,192,5);
+
  Estrella() {
     this.x = mouseX/640.00;
     this.y = mouseY/360.00;
@@ -34,6 +34,6 @@ class Estrella{
     rotate(frameCount / 400.0);
     f(); 
     popMatrix();
-    fill(inside);
+    fill(color(255,192,5));
   }
 };
