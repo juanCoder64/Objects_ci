@@ -1,18 +1,37 @@
 Camion c;
 Estrella strella= new Estrella();  
-void setup(){
-  size(640, 360);
-  c = new Camion(width/2, height/2, 100 , 50, color(255, 255, 0), 10);
-}
-void mouseClicked(){
-  strella = new Estrella();
+PImage cursed_Image;
+PImage cursed_Gif;
+color kkk = 255;
+
+void cambiarColor()
+{
+  if(mouseX>1050&&mouseX<1200){
+    if(mouseY>50&&mouseY<200){
+      kkk=color(random(float(100)),random(float(100)),random(float(100)));
+    }
   }
+}
+void setup(){
+  size(1370,800);
+   cursed_Image = loadImage("processing.jpg");
+   cursed_Gif = loadImage("bears.gif");
+   c = new Camion(width/2-100, height/20, 200 , 100, color(255, 255, 0), 10);
+}
+
+  
 void draw(){
  
     background(255);
     c.dibujar();
-      strella.dibujar();
-    delay(1);
+    cambiarColor();
+    strella.dibujar();
+    image(cursed_Image, 850, 450, width*.2, height*.2);
+    image(cursed_Gif, 50, height/2-125, width*.2, height*.2);
+    fill(kkk);
+    ellipseMode(CORNER);
+    ellipse(1050,50,150,150);
+
 }
 void keyPressed(){
   if(keyCode == 39){//derecha

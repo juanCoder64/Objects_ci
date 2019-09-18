@@ -3,10 +3,10 @@ class Estrella{
   private int nPoints;
 
  Estrella() {
-    this.x = mouseX/640.00;
-    this.y = mouseY/360.00;
-    this.radius1= 20;
-    this.radius2 = 50;
+    this.x = 250/1370.00;
+    this.y = 100/800.00;
+    this.radius1= 35;
+    this.radius2 = 80;
     this.nPoints = 5;
   }
   
@@ -30,6 +30,7 @@ class Estrella{
   
   public void dibujar(){
     pushMatrix();
+    fill(color(255,192,5));
     translate(width*x, height*y);
     rotate(frameCount / 400.0);
     f(); 
