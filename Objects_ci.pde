@@ -3,13 +3,40 @@ Estrella strella= new Estrella();
 PImage cursed_Image;
 PImage cursed_Gif;
 color kkk = 255;
+color kkkk = 255;
+int bool1 =1;
+int bool2 =1;
 
-void cambiarColor()
+void cambiarColorE()
 {
   if(mouseX>1050&&mouseX<1200){
     if(mouseY>50&&mouseY<200){
-      kkk=color(random(float(100)),random(float(100)),random(float(100)));
+      if(bool1==1)
+      {
+        kkk=color(random(float(100)),random(float(100)),random(float(100)));
+        bool1=0;
+      }
     }
+  }
+  else
+  {
+    bool1=1;
+  }
+}
+void cambiarColorR()
+{
+  if(mouseX>200&&mouseX<350){
+    if(mouseY>530&&mouseY<680){
+      if(bool2==1)
+      {
+        kkkk=color(random(float(100)),random(float(100)),random(float(100)));
+        bool2=0;
+      }
+    }
+  }
+  else
+  {
+    bool2=1;
   }
 }
 void setup(){
@@ -24,12 +51,16 @@ void draw(){
  
     background(255);
     c.dibujar();
-    cambiarColor();
+    cambiarColorE();
+    cambiarColorR();
     strella.dibujar();
     image(cursed_Image, 850, 450, width*.2, height*.2);
-    image(cursed_Gif, 50, height/2-125, width*.2, height*.2);
-    fill(kkk);
+    image(cursed_Gif, 50, height/2-140, width*.2, height*.2);
+    fill(kkkk);
     ellipseMode(CORNER);
+    rectMode(CORNER);
+    rect(200,530,150,150);
+    fill(kkk);
     ellipse(1050,50,150,150);
 
 }
