@@ -1,7 +1,8 @@
 class Camion extends Vehiculo {
 
-
-  public Camion(float x, float y, float w, float h, int _color, float v) {
+  boolean f=false;
+  int x,y;
+  public Camion(int x, int y, float w, float h, int _color, float v) {
     super(v, 3);
     this.x = x;
     this.y = y;
@@ -19,7 +20,25 @@ class Camion extends Vehiculo {
     carcasa.dibujar();
     llantaIzq.dibujar();
     llantaDer.dibujar();
+    fill(0,0,255);
+    rect(x,y,10,10);
     for (int i=0; i<3; i++)
       ventana[i].dibujar();
   }
+ void mC()
+ {
+  if(f==true)
+   {
+     f=false;
+     x=mouseX;
+     y=mouseY;
+   }
+   else
+   {
+    if(mouseX>x-10&&mouseX<x+10&&mouseY>y-10&&mouseY<y+10)
+    {
+      f=true;
+    }
+  }
+ }
 }
